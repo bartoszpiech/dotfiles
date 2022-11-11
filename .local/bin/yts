@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ $# -lt 1 ]
+then
+    echo "Error, no arguments given."
+    exit 1
+fi
+mpv "ytdl://ytsearch:$1" --ytdl-format="best[width<=720]"

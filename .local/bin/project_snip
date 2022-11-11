@@ -1,0 +1,19 @@
+#!/bin/bash
+
+PROJECT_SNIPPETS_PATH=$HOME/.local/project_snip
+
+chosen=$(ls $PROJECT_SNIPPETS_PATH | dmenu -l 30)
+
+# Exit if none chosen.
+[ -z "$chosen" ] && exit
+
+chosen=$PROJECT_SNIPPETS_PATH/$chosen
+
+if [ $# -lt 1 ]
+then
+    cp -r $chosen .
+	notify-send "$chosen" "project snip copied to cwd" &
+else
+    cp -r $chosen $1
+	notify-send "$chosen" "project snip copied to $1" &
+fi

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SNIPPETS_PATH=$HOME/.local/snip
+
+chosen=$(ls $SNIPPETS_PATH | dmenu -l 30)
+chosen=$SNIPPETS_PATH/$chosen
+#cat $chosen | tr -d '\n' | xclip -sel clipboard
+cat $chosen | xclip -sel clipboard

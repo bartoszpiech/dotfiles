@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+bookmark_file=$HOME/.local/bookmarks
+bookmark=$(cat $bookmark_file | dmenu -i -l 30)
+
+[ -z "$bookmark" ] && exit
+
+printf "$bookmark" | xclip -selection clipboard
+grep -v "^$bookmark$" $bookmark_file > /tmp/bookmark && mv /tmp/bookmark $bookmark_file
+notify-send "$bookmark" "copied to clipboard and deleted permanently" &

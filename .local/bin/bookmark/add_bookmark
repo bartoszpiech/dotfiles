@@ -1,0 +1,11 @@
+#!/bin/sh
+
+bookmark_file=$HOME/.local/bookmarks
+bookmark=$(xclip -selection clipboard -o)
+
+if grep -q "^$bookmark$" $bookmark_file; then
+	notify-send "$bookmark" "Already bookmarked"&
+else
+	notify-send "$bookmark" "Added to bookmarks"&
+	echo "$bookmark" >> "$bookmark_file"
+fi

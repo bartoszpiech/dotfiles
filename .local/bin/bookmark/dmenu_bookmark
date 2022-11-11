@@ -1,0 +1,14 @@
+#!/bin/sh
+
+bookmark_file=$HOME/.local/bookmarks
+bookmark=$(cat $bookmark_file | dmenu -i -l 30)
+
+# Exit if none chosen.
+[ -z "$bookmark" ] && exit
+
+if [ -n "$1" ]; then
+	xdotool type "$bookmark"
+else
+	printf "$bookmark" | xclip -selection clipboard
+	notify-send "$bookmark" "bookmark copied to clipboard" &
+fi

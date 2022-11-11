@@ -1,0 +1,4 @@
+#!/bin/sh
+
+MAC="14:3F:A6:90:F4:1A"
+echo -e "power on\ndisconnect $MAC" | bluetoothctl &
