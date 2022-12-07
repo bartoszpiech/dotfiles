@@ -1,0 +1,9 @@
+setxkbmap -layout pl,pl -variant dvorak, -option caps:escape -option grp:ctrl_space_toggle
+#setxkbmap -layout pl -variant dvorak -option caps:escape
+#xwallpaper --zoom $HOME/.local/wallpapers/$(ls $HOME/.local/wallpapers/ | sort -R | head -n 1)
+xwallpaper --zoom $HOME/.local/wallpapers/actual/$(ls $HOME/.local/wallpapers/actual | sort -R | head -n 1)
+#xcompmgr&
+dwmblocks&
+#sudo /usr/bin/powertop --auto-tune
+
+exec dwm
