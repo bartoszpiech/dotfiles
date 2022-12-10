@@ -1,5 +1,6 @@
 #!/bin/sh
 
 #xwallpaper --zoom $HOME/.local/wallpapers/$(ls $HOME/.local/wallpapers/ | sort -R | head -n 1)
-xwallpaper --zoom $HOME/.local/wallpapers/actual/$(ls $HOME/.local/wallpapers/actual | sort -R | head -n 1)
+#xwallpaper --zoom $HOME/.local/wallpapers/actual/$(ls $HOME/.local/wallpapers/actual | sort -R | head -n 1)
+xwallpaper --maximize $HOME/.local/wallpapers/actual/$(ls $HOME/.local/wallpapers/actual | sort -R | head -n 1)
 

@@ -21,7 +21,7 @@ compinit
 # my config from bashrc
 alias vi="nvim"
 
-alias ls='ls --color=auto'
+#alias ls='ls --color=auto'
 #alias ytdla="youtube-dl -f 'bestaudio'"
 alias ytdla="yt-dlp -f 'bestaudio'"
 alias panamint="ssh -X bpiech@panamint.ict.pwr.wroc.pl"
@@ -34,6 +34,8 @@ alias sbartek_pi="ssh bartek@87.205.116.41"
 alias mpvyt720p="mpv --ytdl-format=\"bestvideo[height<=?720]+bestaudio/best\""
 
 # managing bare dotfiles repo
-GIT_DIR="$HOME/dotfiles/"
-alias dotfiles="/usr/bin/git --git-dir=$GIT_DIR --work-tree=$HOME"
+DOTFILES_BARE_GIT_DIR="$HOME/.local/dotfiles/"
+alias dotfiles="/usr/local/bin/git --git-dir=$DOTFILES_BARE_GIT_DIR --work-tree=$HOME"
 dotfiles config --local status.showUntrackedFiles no
+
+alias setdisplayinjanow="xrandr --output VGA1 --mode 1280x1024 --right-of LVDS1 && switchwallpaper"

@@ -47,8 +47,8 @@ Plug 'gruvbox-community/gruvbox',
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}, " not working rn
 " Plug 'wannesm/wmnusmv.vim'  " nusmv coloring
-Plug 'evanleck/vim-svelte',  " svelte
-Plug 'mcchrish/nnn.vim',
+" Plug 'evanleck/vim-svelte',  " svelte
+" Plug 'mcchrish/nnn.vim',
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }  " go plugin
 call plug#end()
 

@@ -1,0 +1,1 @@
+/home/barti/.config/x11/xinitrc
